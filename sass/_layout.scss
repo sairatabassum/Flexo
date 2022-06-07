@@ -5,6 +5,11 @@
   box-shadow: var(--shadow-dark);
 
   min-height: 50rem;
+
+  @media only screen and (max-width: $bp-tab-land) {
+    margin: 0;
+    max-width: 100%;
+  }
 }
 
 .header {

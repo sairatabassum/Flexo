@@ -36,6 +36,9 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Open Sans" sans-serif;
@@ -53,6 +56,10 @@ body {
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark);
   min-height: 50rem; }
+  @media only screen and (max-width: 68.75em) {
+    .container {
+      margin: 0;
+      max-width: 100%; } }
 
 .header {
   font-size: 1.7rem;
@@ -178,6 +185,9 @@ body {
 .side-nav {
   font-size: 1.4rem;
   margin-top: 3.5rem; }
+  @media only screen and (max-width: 55.25em) {
+    .side-nav {
+      font-size: 1rem; } }
   .side-nav__item {
     list-style: none;
     position: relative; }
@@ -360,6 +370,9 @@ body {
       padding-bottom: 0.1rem;
       text-transform: uppercase;
       font-weight: 600; }
+      @media only screen and (max-width: 55.25em) {
+        .review__user-name {
+          font-size: 1rem; } }
     .review__user-date {
       font-size: 1rem;
       color: var(--color-grey-dark-3); }
