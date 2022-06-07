@@ -72,7 +72,8 @@ body {
   align-items: center; }
   @media only screen and (max-width: 27.68em) {
     .header {
-      font-size: 1.2rem; } }
+      flex-wrap: wrap;
+      height: 12rem; } }
 
 .content {
   display: flex; }
@@ -133,16 +134,18 @@ body {
 .logo {
   height: 3.25rem;
   margin-left: 3rem; }
-  @media only screen and (max-width: 27.68em) {
-    .logo {
-      height: 2rem;
-      margin-left: 2rem; } }
 
 .search {
   flex: 0 0 40%;
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 27.68em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      border-top: 1px solid #ccc;
+      padding: 1rem; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -186,9 +189,6 @@ body {
     height: 100%;
     display: flex;
     align-items: center; }
-    @media only screen and (max-width: 21.44em) {
-      .user-nav > * {
-        padding: 0 1rem; } }
   .user-nav > *:hover {
     background-color: var(--color-grey-light-2); }
   .user-nav__icon-box {
@@ -197,10 +197,6 @@ body {
     height: 2.5rem;
     width: 2.5rem;
     fill: var(--color-grey-dark-2); }
-    @media only screen and (max-width: 27.68em) {
-      .user-nav__icon {
-        height: 1.75rem;
-        width: 1.75rem; } }
   .user-nav__notification {
     font-size: 0.8rem;
     height: 1.75rem;
@@ -219,10 +215,6 @@ body {
     width: 3.7rem;
     border-radius: 50%;
     margin-right: 1rem; }
-    @media only screen and (max-width: 27.68em) {
-      .user-nav__user-photo {
-        height: 2rem;
-        width: 2rem; } }
 
 .side-nav {
   font-size: 1.4rem;
@@ -270,13 +262,10 @@ body {
     position: relative; }
     @media only screen and (max-width: 27.68em) {
       .side-nav__link:link, .side-nav__link:visited {
-        padding: 1.2rem 2rem; } }
-    @media only screen and (max-width: 21.44em) {
+        flex-direction: column; } }
+    @media only screen and (max-width: 20.38em) {
       .side-nav__link:link, .side-nav__link:visited {
-        padding: 1rem; } }
-    @media only screen and (max-width: 27.68em) {
-      .side-nav__link:link span, .side-nav__link:visited span {
-        font-size: 0.8rem; } }
+        padding: 1rem 2rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
@@ -284,8 +273,9 @@ body {
     fill: currentColor; }
     @media only screen and (max-width: 27.68em) {
       .side-nav__icon {
-        width: 1.2rem;
-        height: 1.2rem; } }
+        margin-right: 0;
+        width: 1.5rem;
+        height: 1.5rem; } }
 
 .legal {
   font-size: 1.2rem;
@@ -327,7 +317,7 @@ body {
     @media only screen and (max-width: 27.68em) {
       .overview__heading {
         font-size: 1rem;
-        padding: 1rem 2rem; } }
+        padding: 1rem 1rem; } }
     @media only screen and (max-width: 20.38em) {
       .overview__heading {
         padding: 1rem; } }
