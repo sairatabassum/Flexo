@@ -114,12 +114,20 @@
   @media only screen and (max-width: $bp-tab-port) {
     font-size: 1rem;
   }
+  @media only screen and (max-width: $bp-tab-phone) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+  }
   &__item {
     list-style: none;
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+      @media only screen and (max-width: $bp-tab-phone) {
+        margin-bottom: 0;
+      }
     }
   }
   &__item::before {
@@ -153,6 +161,17 @@
     align-items: center;
     z-index: 10;
     position: relative;
+    @media only screen and (max-width: $mini) {
+      padding: 1.2rem 2rem;
+    }
+    @media only screen and (max-width: $small-1) {
+      padding: 1rem;
+    }
+    span {
+      @media only screen and (max-width: $mini) {
+        font-size: 0.8rem;
+      }
+    }
   }
 
   &__icon {
@@ -160,6 +179,10 @@
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor;
+    @media only screen and (max-width: $mini) {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
   }
 }
 
@@ -170,8 +193,22 @@
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light-4);
+  @media only screen and (max-width: $bp-tab-phone) {
+    display: none;
+  }
 }
-
+.legal-v {
+  display: none;
+  @media only screen and (max-width: $bp-tab-phone) {
+    display: inline-block;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2.5rem;
+    color: var(--color-grey-light-4);
+    background-color: var(--color-grey-dark-1);
+    width: 100%;
+  }
+}
 /////////////////////////////////////
 // GALLERY
 
@@ -196,6 +233,13 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+    @media only screen and (max-width: $mini) {
+      font-size: 1rem;
+      padding: 1rem 2rem;
+    }
+    @media only screen and (max-width: $small) {
+      padding: 1rem;
+    }
   }
   &__stars {
     // flex: 1;
@@ -207,12 +251,19 @@
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-primary);
+    @media only screen and (max-width: $mini) {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
   }
   &__location {
     margin-right: 3rem;
     display: flex;
     font-size: 1.2rem;
     vertical-align: center;
+    @media only screen and (max-width: $mini) {
+      margin-right: 2rem;
+    }
   }
 
   &__rating {
@@ -228,6 +279,9 @@
       font-size: 2.25rem;
       font-weight: 300;
       margin-bottom: -3px;
+      @media only screen and (max-width: $mini) {
+        font-size: 1.5rem;
+      }
     }
     &-count {
       font-size: 0.8rem;
@@ -331,14 +385,16 @@
   &__count {
     margin-right: auto;
   }
-
+  &__friends {
+    display: flex;
+  }
   &__photo {
     box-sizing: border-box;
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
     &:not(:last-child) {
-      margin-right: -1.5rem;
+      margin-right: -2rem;
     }
     border: 3px solid #fff;
   }
@@ -354,6 +410,9 @@
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden;
+  @media only screen and (max-width: $bp-mini-phone) {
+    padding: 2rem;
+  }
 
   &__text {
     margin-bottom: 2rem;
@@ -364,8 +423,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media only screen and (max-width: $bp-mini) {
+      flex-direction: column;
+    }
     &-box {
       margin-right: auto;
+      @media only screen and (max-width: $bp-mini) {
+        margin-right: 0;
+      }
     }
     &-name {
       padding-bottom: 0.1rem;
@@ -385,6 +450,10 @@
     width: 4.5rem;
     border-radius: 50%;
     margin-right: 2rem;
+    @media only screen and (max-width: $bp-mini) {
+      margin-right: 0;
+      margin-bottom: 1.2rem;
+    }
   }
   &__text {
   }
@@ -392,6 +461,9 @@
     color: var(--color-primary);
     font-size: 2.25rem;
     font-weight: 300;
+    @media only screen and (max-width: $bp-mini-phone) {
+      font-size: 2rem;
+    }
   }
   &::before {
     content: "\201C";
@@ -412,15 +484,22 @@
 .cta {
   padding: 3.5rem 0;
   text-align: center;
+
   &__book-now {
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 2.5rem;
+    @media only screen and (max-width: $bp-mini-phone) {
+      font-size: 1rem;
+    }
   }
 }
 
 .btn {
+  @media only screen and (max-width: $bp-mini-phone) {
+    font-size: 1.2rem;
+  }
   font-size: 1.5rem;
   font-weight: 300;
   text-transform: uppercase;

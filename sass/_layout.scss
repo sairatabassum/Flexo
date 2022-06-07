@@ -9,6 +9,7 @@
   @media only screen and (max-width: $bp-tab-land) {
     margin: 0;
     max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -23,6 +24,9 @@
 }
 .content {
   display: flex;
+  @media only screen and (max-width: $bp-tab-phone) {
+    flex-direction: column;
+  }
 }
 .sidebar {
   background-color: var(--color-grey-dark-1);
@@ -42,6 +46,17 @@
   padding: 4.5rem;
   background-color: var(--color-grey-light-2);
   border-bottom: 1px solid var(--color-grey-light-2);
+
+  @media only screen and (max-width: $bp-mini-phone) {
+    padding: 3rem;
+  }
+  @media only screen and (max-width: $bp-mini-small) {
+    flex-direction: column;
+    padding: 6rem;
+  }
+  @media only screen and (max-width: 348px) {
+    padding: 4rem;
+  }
 }
 .description {
   background-color: #fff;
@@ -49,6 +64,16 @@
   flex: 0 0 60%;
   margin-right: 4.5rem;
   padding: 3rem;
+  @media only screen and (max-width: $bp-mini-phone) {
+    padding: 2rem;
+  }
+  @media only screen and (max-width: $bp-mini-small) {
+    margin-right: 0;
+    margin-bottom: 4rem;
+  }
+  @media only screen and (max-width: $small-1) {
+    padding: 1.2rem;
+  }
 }
 .user-review {
   flex: 1;
