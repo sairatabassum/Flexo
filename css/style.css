@@ -471,7 +471,10 @@ body {
       margin-right: auto; }
       @media only screen and (max-width: 36.12em) {
         .review__user-box {
-          margin-right: 0; } }
+          margin-right: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center; } }
     .review__user-name {
       padding-bottom: 0.1rem;
       text-transform: uppercase;

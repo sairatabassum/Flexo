@@ -445,6 +445,9 @@
       margin-right: auto;
       @media only screen and (max-width: $bp-mini) {
         margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
     &-name {
