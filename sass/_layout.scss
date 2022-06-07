@@ -21,6 +21,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: $mini) {
+    font-size: 1.2rem;
+  }
 }
 .content {
   display: flex;
